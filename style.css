@@ -47,8 +47,33 @@ p {
 }
 
 p {
-    opacity: .8;
+  opacity: 0.8;
 }
 form {
   margin-top: 4.8rem;
+  display: flex;
+
+  justify-content: center;
+}
+
+input,
+button {
+  border: none;
+  padding: 1.6rem;
+
+  font-family: "Montserrat", sans-serif; /* Algumas props não aceitam def no body. Por isso, forçamos aqui a estilização do txt do input e do btn.*/
+}
+
+input {
+  background-color: #dce2e9;
+  border-radius: 0.4rem 0 0 0.4rem;
+  width: 6rem;
+}
+
+button {
+  background-color: #7879f1;
+  border-radius: 0 0.4rem 0.4rem 0;
+
+  color: white;
+  font-weight: bold;
 }
