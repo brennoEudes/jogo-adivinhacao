@@ -19,6 +19,26 @@ body {
   height: 100vh;
 }
 
+/* Como é uma config. geral, foi colocado aqui em cima depois do body: */
+button {
+  background-color: #7879f1;
+  border-radius: 0 0.4rem 0.4rem 0;
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background .3s; /* Transição mais suave de cor do hover*/
+}
+
+button:hover {
+  background-color: #4c4c93;
+}
+
+.hide {
+  display: none;
+}
+
 main {
   border-radius: 0.6rem;
   background: #fff;
@@ -35,6 +55,7 @@ main {
   text-align: center;
 }
 
+/* Screen 1*/
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.4rem;
@@ -70,10 +91,15 @@ input {
   width: 6rem;
 }
 
-button {
-  background-color: #7879f1;
-  border-radius: 0 0.4rem 0.4rem 0;
+/* SCREEN 2*/
+h2 {
+  font-size: 2.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: #34355b;
+}
 
-  color: white;
-  font-weight: bold;
+.screen-2 button {
+  border-radius: 0.4rem;
+  margin-top: 3.2rem;
 }
