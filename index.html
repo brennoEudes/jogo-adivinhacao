@@ -16,18 +16,19 @@
   </head>
   <body>
     <main>
-      <div class="screen-1 hide">
+      <div class="screen-1">
         <h1>Jogo da Adivinhação</h1>
         <p>Adivinhe o número entre 0 e 10</p>
 
         <form>
-          <input type="number" />
-          <button>Tentar</button>
+          <input id="input-number" type="number" /> <!--OBS: "input" não tem nd interno.-->
+          <!-- <button id="btn-try" onclick="handleClick(event)">Tentar</button> "onclick": propriedade DOM (evento) aplicado via atributo HTMl que executa uma fcn JS ao elemento ser clicado. Não é boa prática fazer essa interação no HTML, mas sim no JS, por isso excluímos e colocamos o id abaixo. -->
+          <button id="btn-try">Tentar</button>
         </form>
       </div>
-      <div class="screen-2">
+      <div class="screen-2 hide">
         <h2>Acertou em 3 tentativas!</h2>
-        <button>Jogar novamente</button>
+        <button id="btn-reset">Jogar novamente</button>
       </div>
     </main>
 
