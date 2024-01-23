@@ -10,7 +10,14 @@ let xAttempts = 1; // começa em 1, pois se o user acertar na 1º, não ficará 
 
 // EVENTOS
 btnTry.addEventListener("click", handleTryClick); // No caso, a fcn handleTryClick só será executada após o click!
-btnReset.addEventListener("click", handleResetClick);
+btnReset.addEventListener("click", handleResetClick); 
+
+// Seleciona e add funcionalidade ao btn enter:
+document.addEventListener("keydown", function (e) {
+  if (e.key == "Enter" && screen1.classList.contains("hide")) {
+    handleResetClick();
+  }
+});
 
 // FUNÇÕES:
 // Função callback: fcn que é passada como parâmetro em uma outra fcn, em que algum momento será executada.
