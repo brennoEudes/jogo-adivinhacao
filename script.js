@@ -1,11 +1,11 @@
 // VARIÁVEIS:
-const screen1 = document.querySelector(".screen-1");
+const screen1 = document.querySelector(".screen-1"); // quando comeca a fica mt repetitivo, podemos colocar em variáveis
 const screen2 = document.querySelector(".screen-2");
 
 const btnTry = document.querySelector("#btn-try");
 const btnReset = document.querySelector("#btn-reset");
 
-let randomNumber = Math.round(Math.random() * 10); // lógica utilizando método JS p/ gerar nº aleatórios entre 0 e 10 e guardar em memória.
+let randomNumber = Math.round(Math.random() * 10); // lógica utilizando método JS p/ gerar nº aleatórios entre 0 e 10 e guardar em memória. OBS: Trocamos "const" por "let" p/ permitir o reset na fcn handleResetClick.
 let xAttempts = 1; // começa em 1, pois se o user acertar na 1º, não ficará o zero!
 
 // EVENTOS
@@ -14,7 +14,7 @@ btnReset.addEventListener("click", handleResetClick);
 
 // Seleciona e add funcionalidade ao btn enter:
 document.addEventListener("keydown", function (e) {
-  if (e.key == "Enter" && screen1.classList.contains("hide")) {
+  if (e.key == "Enter" && screen1.classList.contains("hide")) { // 2 condições p/ evento Enter acontecer!
     handleResetClick();
   }
 });
@@ -37,7 +37,7 @@ function handleTryClick(event) {
     // 2º forma (mais simples):
     toggleScreen();
 
-    screen2.querySelector(
+    screen2.querySelector( // ñ precisa pesquisar no document inteiro, podemos pesquisar no elemento.
       "h2"
     ).innerText = `Parabéns! Você acertou em ${xAttempts} tentativas.`;
   } else {
